@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optionen festlegen 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[    % Wenn Option nicht gewünscht, auskommentieren
+    presentation,  % Präsentationsmodus
+    loesung,        % Auskommentiert: Angabe
+    letzterstand,   % 'aktualisiert am xx' im Header anzeigen 
+    einzelstunden,  % Sections für Einzelstunden (nur Präsentation)
+    aufraeumen,    % Bitte aufräumen Folie am Ende von Einzelstunden
+    timer,         % Wo konfiguriert Timer anzeigen
+    attachements,  % attach template and solution files (e.g. .xlsx)
+    qrcodes,       % show additional qrcodes for URLs
+    avenir          % Avenir Next LT Pro verwenden
+]{sty/MainPackage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HIER DIE INHALTE EINFÜGEN ODER IMPROTIEREN (empfohlen)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \Testart{Skript}
+ \Klasse{Klasse}
+ \Fach{Fach}
+ \Titel{Titel/Thema}
+%\renewcommand{\Content}{Was auch immer der Inhalt ist}
+%\input{2025-2026/ExcelSkript}
+
+\renewcommand{\Content}{
+    \mysession{Stunde 1}{
+        \Hefteintrag{2}{Dummy Hefteintrag}{
+            Ich bin ein Hefteintrag über was auch immer für ein Thema.
+        }
+        \Aufgabe{Dummy Aufgabe}{
+            Und ich bin eine Aufgabe.
+        }
+    }
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Hier nichts ändern !
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% !!! IMMER MIT XELATEX KOMPILIEREN !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
