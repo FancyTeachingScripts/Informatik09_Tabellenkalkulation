@@ -1,0 +1,40 @@
+\Hefteintrag[40]{1}{Wenn-Dann-Funktion}{
+
+\vspace{0.5cm}
+\begin{enumerate}
+    \item Öffne Studyflix: \UrlAndCode[-1.5cm][-0.85cm]{bycs.link/studyflix-excel-if}
+    \item Schaue das Video und baue die beschriebene Tabelle nach.
+    \item Fasst den Artikel/das Video in einem kurzen \emphColA{Hefteintrag} zusammen.
+\end{enumerate}
+\LoesungKaro{
+
+\ifbeamer
+\vspace{0.2cm}
+    \begin{minipage}{0.8\textwidth}
+\fi
+Mit der  \emphColA{Wenn-Dann-Funktion} können anhand einer Bedingung verschiedene Werte verwendet werden. 
+
+\vspace{0.2cm}
+Eine Bedingung kann z.B. 
+\begin{itemize}
+    \item \emphColA{Gleichheit zweier Werte (=)} oder
+    \item eine \emphColB{Größer-/Kleiner-Bedingung (<,>,<=,>=)}
+\end{itemize} 
+prüfen. 
+
+\vspace{0.2cm}
+Wenn die \emphColA{Bedingung} als \emphColA{wahr} ausgewertet \emphColA{(=erfüllt)} wird, wird der \emphColB{Dann-Teil in die Zelle eingefügt}, ansonsten der \emphColC{Sonst-Teil}.
+
+\vspace{0.5cm}
+In Excel gibt man die Funktion so ein:
+
+\vspace{0.2cm}
+Schema:~~~~=WENN(\emphColA{Bedingung}  ; \emphColB{Dann} ; \emphColC{Sonst})
+
+Beispiel:~~~~=WENN(\emphColA{D5 < 10} ; \emphColB{„kleiner als 10“} ; \emphColC{„größer oder gleich 10“})
+
+\ifbeamer
+\end{minipage}
+\fi
+}{43}
+}
