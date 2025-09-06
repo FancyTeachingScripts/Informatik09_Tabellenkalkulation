@@ -76,7 +76,9 @@ draw=black]
 }
 
 \renewcommand{\hinweis}[1]{
-  {\color{gray}\small \faInfoCircle~#1}
+    \ifhints
+        {\color{gray}\small \faInfoCircle~#1}
+    \fi
 }
 
 
@@ -86,6 +88,7 @@ draw=black]
 	\draw (0,0) rectangle (\anzahl*#1,#2*#1) (0,0) grid (\anzahl*#1,#2*#1);
 	\end{tikzpicture} 
 }
+
 
 \renewcommand{\multi}{\item[$\circ$]}
 
