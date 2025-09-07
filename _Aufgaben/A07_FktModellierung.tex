@@ -10,13 +10,16 @@
     \large\textbf{Getränkegewinn} \normalsize \hspace{0.2cm}
     Durch den Verkauf der Getränke nimmst du Geld ein. Am Ende der Party zählst du die Kassen und erhältst die Gesamteinnahmen. Aus diesem Betrag und den Ausgaben beim Lieferanten errechnest du den Gewinn.\\
     \LoesungKaroTikz{
-                \node[dfddata, text width=4cm] (werte) {Werte (Eingaben/Ausgaben)};
+                \node[dfddata, text width=4.2cm] (in) {Getränke Einnahmen};
+                \node[dfddata, text width=4.2cm, right=1cm of in] (out) {Getränke Ausgaben};
 
-                \node[oval, text width=2.2cm, right=0.2cm of werte] (fkt) {Funktionen};
+                \node[oval, text width=4cm, below=1cm of $(in)!0.5!(out)$] (fkt) {Getränkegewinn berechnen};
                 
-                \node[minimum width=1pt, below=1cm of werte] (d1) {Datenflüsse: };
-                \node[minimum width=1pt, right=1cm of d1] (d2) { };
-                \draw[arrow] (d1)--(d2);
+                \node[dfddata, text width=4cm, below=0.7cm of fkt] (diff) {Getränke Gewinn};
+                
+                \draw[arrow] (in)--(fkt);
+                \draw[arrow] (out)--(fkt);
+                \draw[arrow] (fkt)--(diff);
         }{16}
 }
 \UnterAufgabe{Übung: Funktionale Modellierung (b)}{
