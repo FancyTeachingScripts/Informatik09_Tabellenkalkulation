@@ -39,7 +39,11 @@ draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 \@ifundefined{NC@rewrite@C}{\newcolumntype{C}{>{\Centering\hspace{0pt}}X}}{}
 
-\tikzset{box/.style={draw, rectangle, rounded corners=0pt, align=center}}
+\tikzstyle{dfddata} =[box, 
+    rounded corners=1pt,  
+    minimum width=1pt]
+
+\tikzset{box/.style={draw, rectangle, rounded corners=3pt, align=center}}
 
 
 \newcommand\calcVerticalBoxes[2]{%
