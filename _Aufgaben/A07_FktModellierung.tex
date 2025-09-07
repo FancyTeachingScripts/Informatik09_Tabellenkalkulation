@@ -9,24 +9,65 @@
     
     \large\textbf{Getränkegewinn} \normalsize \hspace{0.2cm}
     Durch den Verkauf der Getränke nimmst du Geld ein. Am Ende der Party zählst du die Kassen und erhältst die Gesamteinnahmen. Aus diesem Betrag und den Ausgaben beim Lieferanten errechnest du den Gewinn.\\
-    \LoesungKaroTikz{
-                \node[dfddata, text width=4.2cm] (in) {Getränke Einnahmen};
-                \node[dfddata, text width=4.2cm, right=1cm of in] (out) {Getränke Ausgaben};
+    \doppelseite{0.5}{0.5}{t}{
+        \LoesungKaroTikz{
+            \node[dfddata, text width=2.2cm] (in) {Getränke Einnahmen};
+            \node[dfddata, text width=2.2cm, right=1cm of in] (out) {Getränke Ausgaben};
 
-                \node[oval, text width=4cm, below=1cm of $(in)!0.5!(out)$] (fkt) {Getränkegewinn berechnen};
-                
-                \node[dfddata, text width=4cm, below=0.7cm of fkt] (diff) {Getränke Gewinn};
-                
-                \draw[arrow] (in)--(fkt);
-                \draw[arrow] (out)--(fkt);
+            \node[oval, text width=4cm, below=1cm of $(in)!0.5!(out)$] (fkt) {Getränkegewinn berechnen};
+            
+            \node[dfddata, text width=4cm, below=0.7cm of fkt] (diff) {Getränke Gewinn};
+            
+            \draw[arrow] (in)--(fkt);
+            \draw[arrow] (out)--(fkt);
                 \draw[arrow] (fkt)--(diff);
         }{16}
+    }{
+        \LoesungKaroTikz{
+            \node[dfddata, text width=2.2cm] (in) {Getränke Einnahmen};
+            \node[dfddata, text width=2.2cm, right=1cm of in] (out) {Getränke Ausgaben};
+
+            \node[oval, text width=4cm, below=1cm of $(in)!0.5!(out)$] (fkt) {-};
+            
+            \node[dfddata, text width=4cm, below=0.7cm of fkt] (diff) {Getränke Gewinn};
+            
+            \draw[arrow] (in)--(fkt);
+            \draw[arrow] (out)--(fkt);
+                \draw[arrow] (fkt)--(diff);
+        }{16}
+    }
 }
 \UnterAufgabe{Übung: Funktionale Modellierung (b)}{
     \begin{minipage}[t]{\textwidth}
     \large\textbf{Security} \normalsize \hspace{0.2cm}
     Weil die Feier deiner besten Freundin beim letzten Mal eskaliert ist, engagierst du einen Sicherheitsdienst. Die Anzahl der benötigten Security-Mitarbeiter berechnest du aus der Anzahl an Gästen und einem Personenschlüssel. Im Anschluss werden aus der Anzahl an Mitarbeitern und den Kosten pro Mitarbeiter die Security-Kosten berechnet.\\
-    \LoesungKaro{}{15}\\
+    \doppelseite{0.5}{0.5}{t}{
+        \LoesungKaroTikz{
+            \node[dfddata, text width=2.2cm] (in) {Getränke Einnahmen};
+            \node[dfddata, text width=2.2cm, right=1cm of in] (out) {Getränke Ausgaben};
+
+            \node[oval, text width=4cm, below=1cm of $(in)!0.5!(out)$] (fkt) {Getränkegewinn berechnen};
+            
+            \node[dfddata, text width=4cm, below=0.7cm of fkt] (diff) {Getränke Gewinn};
+            
+            \draw[arrow] (in)--(fkt);
+            \draw[arrow] (out)--(fkt);
+                \draw[arrow] (fkt)--(diff);
+        }{16}
+    }{
+        \LoesungKaroTikz{
+            \node[dfddata, text width=2.2cm] (in) {Getränke Einnahmen};
+            \node[dfddata, text width=2.2cm, right=1cm of in] (out) {Getränke Ausgaben};
+
+            \node[oval, text width=4cm, below=1cm of $(in)!0.5!(out)$] (fkt) {-};
+            
+            \node[dfddata, text width=4cm, below=0.7cm of fkt] (diff) {Getränke Gewinn};
+            
+            \draw[arrow] (in)--(fkt);
+            \draw[arrow] (out)--(fkt);
+                \draw[arrow] (fkt)--(diff);
+        }{16}
+    }
     \end{minipage}
 }
 
