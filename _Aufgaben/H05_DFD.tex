@@ -4,7 +4,7 @@
 
         \vspace{0.3cm}
         \LoesungKaroTikz{
-                \node[box, rounded corners=1pt, text width=4cm, minimum width=1pt] (werte) {Werte (Eingaben/Ausgaben)};
+                \node[dfddata, text width=4cm] (werte) {Werte (Eingaben/Ausgaben)};
 
                 \node[oval, text width=2.2cm, right=0.2cm of werte] (fkt) {Funktionen};
                 
@@ -17,15 +17,15 @@
 
         \vspace{0.2cm}
         \LoesungKaroTikz{
-            \node[box, rounded corners=1pt, text width=1.7cm, minimum width=1pt] (e1) {Eingabe 1};
-            \node[box, rounded corners=1pt, text width=0.5cm, minimum width=1pt, minimum height=8pt, right=0.2cm of e1] (e2) {...};
+            \node[dfddata, text width=1.7cm, minimum width=1pt] (e1) {Eingabe 1};
+            \node[dfddata, text width=0.5cm, minimum height=8pt, right=0.2cm of e1] (e2) {...};
             \node[text width=0.5cm, minimum width=1pt, minimum height=8pt, right=0.2cm of e2] (edots) {...};
-            \node[box, rounded corners=1pt, text width=0.5cm, minimum width=1pt, minimum height=8pt, right=0.2cm of edots] (e3) {...};
-            \node[box, rounded corners=1pt, text width=1.7cm, minimum width=1pt, right=0.2cm of e3] (eN) {Eingabe n};
+            \node[dfddata, text width=0.5cm, minimum height=8pt, right=0.2cm of edots] (e3) {...};
+            \node[dfddata, text width=1.7cm, right=0.2cm of e3] (eN) {Eingabe n};
 
             \node[oval, text width=2.2cm, below=1cm of edots] (fkt) {Funktion};
             
-            \node[box, rounded corners=1pt, below=1cm of fkt] (final) {Ausgabe (genau eine!)};
+            \node[dfddata, below=1cm of fkt] (final) {Ausgabe (genau eine!)};
             
             \draw[arrow] (e1) -- (fkt);
             \draw[arrow] (e2) -- (fkt);
