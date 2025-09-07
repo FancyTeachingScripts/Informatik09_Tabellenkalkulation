@@ -80,7 +80,7 @@
     \begin{tikzpicture}[remember picture, overlay]
         \node[anchor=north east] 
         at ([xshift=-2.5cm, yshift=0.25cm]current page.north east |- sectionstart) 
-        {\textattachfile[color=\TFarbe]{#2}{Vorlage \large #1}\ifloesung };
+        {\textattachfile[color=\TFarbe]{#2}{Vorlage \large #1} };
   \end{tikzpicture}%
 }
 
@@ -114,7 +114,7 @@
     \begin{tikzpicture}[remember picture, overlay]
         \node[anchor=north east] 
         at ([xshift=-2.5cm, yshift=0.25cm]current page.north east |- sectionstart) 
-        {\textattachfile[color=\TFarbe]{#2}{Vorlage \large #1}\ifloesung };
+        {\textattachfile[color=\TFarbe]{#2}{Vorlage \large #1} };
         \ifloesung 
             \node[anchor=north east] 
             at ([xshift=-4.5cm, yshift=0.25cm]current page.north east |- sectionstart) 
@@ -316,8 +316,7 @@
             title= \strut {\color{colB}#1},
             opacityframe=1,
             fontupper=\color{\TFarbe},
-            opacityback=1,  % this does not work
-            %colback=colA,  % this is not what I want
+            opacityback=1,
             colback=colB!7!black,
             colframe=lightgray,
             fonttitle=\bfseries\Large,
@@ -326,8 +325,48 @@
           \marksectionstart
           #2
         \end{tcolorbox}
-    %\end{frame}
     }
+}
+
+\newcommand{\UnterAufgabeSkript}[1]{
+    \begin{minipage}[t]{\textwidth} 
+        \vspace{0.2cm}
+        #1
+    \end{minipage}
+}
+
+\newcommand{\UnterAufgabeBeamer}[3]{
+    %\subsection{\color{colB} #1}
+    \definesframe[false]{#1}{
+    %\begin{frame}
+        \setcounter{lsgcount}{1}
+        \iftimer
+          \ifnum\numexpr#3>0 \relax 
+              \timer{#3}
+              \setcounter{lsgcount}{#3}
+              \stepcounter{lsgcount}
+              \stepcounter{lsgcount}
+          \fi
+        \fi
+        \ParseColorToRgbDecodeArray{colB}\MyColorOneDecodeArray
+        %\marksectionstart
+        \begin{tcolorbox}[%
+            breakable,
+            enhanced,
+            title= \strut {\color{colB}#1},
+            opacityframe=1,
+            fontupper=\color{\TFarbe},
+            opacityback=1,
+            colback=colB!7!black,
+            colframe=lightgray,
+            fonttitle=\bfseries\Large,
+            overlay={\node[anchor=north east,outer sep=-1pt] at (frame.north east) {\includegraphics[height=22pt, decodearray={\MyColorOneDecodeArray}]{sty/img/finger.png}};}
+        ]
+          \marksectionstart
+          #2
+        \end{tcolorbox}
+    }
+
 }
 
 
@@ -336,6 +375,13 @@
         \AufgabeBeamer{#2}{#3}{#1}
     \else
         \AufgabeSkript{#2}{#3}
+    \fi
+}
+\renewcommand{\UnterAufgabe}[3][0]{
+    \ifbeamer
+        \UnterAufgabeBeamer{#2}{#3}{#1}
+    \else
+        \UnterAufgabeSkript{#3}
     \fi
 }
 
