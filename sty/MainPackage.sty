@@ -21,6 +21,7 @@
 \newif\ifattachments
 \newif\ifhints
 
+% single options
 \DeclareOption{presentation}{ \beamertrue }
 \DeclareOption{loesung}{ \loesungtrue} 
 \DeclareOption{avenir}{ \avenirtrue } 
@@ -32,6 +33,134 @@
 \DeclareOption{qrcodes}{ \qrcodestrue } 
 \DeclareOption{hinweise}{ \hintstrue } 
 
+
+
+% preconfigured option packages
+\DeclareOption{presentation-minimal}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+} 
+\DeclareOption{presentation-minimal-session}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+    %\letzterstandtrue
+    \einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    %\attachmentstrue
+    %\qrcodestrue
+    %\hintstrue
+} 
+\DeclareOption{presentation-minimal-attachments}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+    %\letzterstandtrue
+    \einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    \attachmentstrue
+    %\qrcodestrue
+    %\hintstrue
+} 
+\DeclareOption{presentation-noaufraeumen}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+    \letzterstandtrue
+    \einzelstundentrue
+    %\aufraeumentrue
+    \timertrue
+    \attachmentstrue
+    %\qrcodestrue
+    %\hintstrue
+} 
+\DeclareOption{presentation-nosession}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+    \letzterstandtrue
+    %\einzelstundentrue
+    \aufraeumentrue
+    \timertrue
+    \attachmentstrue
+    %\qrcodestrue
+    %\hintstrue
+} 
+\DeclareOption{presentation-notimer}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+    \letzterstandtrue
+    \einzelstundentrue
+    \aufraeumentrue
+    %\timertrue
+    \attachmentstrue
+    %\qrcodestrue
+    %\hintstrue
+} 
+\DeclareOption{presentation-full}{ 
+    \beamertrue 
+    \loesungtrue
+    \avenirtrue
+    \letzterstandtrue
+    \einzelstundentrue
+    \aufraeumentrue
+    \timertrue
+    \attachmentstrue
+    %\qrcodestrue
+    %\hintstrue
+} 
+\DeclareOption{print-students}{ 
+    %\beamertrue 
+    %\loesungtrue
+    \avenirtrue
+    %\letzterstandtrue
+    %\einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    \attachmentstrue
+    \qrcodestrue
+    \hintstrue
+} 
+\DeclareOption{print-solution}{ 
+    %\beamertrue 
+    \loesungtrue
+    \avenirtrue
+    \letzterstandtrue
+    %\einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    \attachmentstrue
+    \qrcodestrue
+    \hintstrue
+} 
+\DeclareOption{print-students-minimal}{ 
+    %\beamertrue 
+    %\loesungtrue
+    \avenirtrue
+    %\letzterstandtrue
+    %\einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    %\attachmentstrue
+    %\qrcodestrue
+    \hintstrue
+} 
+\DeclareOption{print-solution-minimal}{ 
+    %\beamertrue 
+    \loesungtrue
+    \avenirtrue
+    %\letzterstandtrue
+    %\einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    %\attachmentstrue
+    %\qrcodestrue
+    \hintstrue
+} 
 
 \ProcessOptions\relax
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
