@@ -11,9 +11,25 @@
     \ifbeamer
         \stepcounter{lsgcount}
         \onslide<\value{lsgcount}-> 
-            {{\color{\LFarbe} \fontspec{Comic Sans MS} #1} }%
+            {{
+                \color{\LFarbe}
+                \renewcommand{\umldrawcolor}{\LFarbe}
+                \renewcommand{\umltextcolor}{\LFarbe}
+                \fontspec{Comic Sans MS} 
+                #1
+                \renewcommand{\umldrawcolor}{\TFarbe}
+                \renewcommand{\umltextcolor}{\TFarbe}
+            }}%
     \else
-        { \color{\LFarbe} \fontspec{Comic Sans MS} #1}
+        { 
+            \color{\LFarbe}
+            \renewcommand{\umldrawcolor}{\LFarbe}
+            \renewcommand{\umltextcolor}{\LFarbe}
+            \fontspec{Comic Sans MS} 
+            #1
+            \renewcommand{\umldrawcolor}{\TFarbe}
+            \renewcommand{\umltextcolor}{\TFarbe}
+        }
     \fi
 }
 
@@ -45,7 +61,7 @@
 	\ifloesung
       \LSG{#1}
     \else
-	  \Leer{#2}
+	   \Leer{#2}
 	\fi
 }
 
@@ -120,14 +136,13 @@
         #1
 \end{description}
 }
-
-%Loesung in Mutliplechoice
+\renewcommand{\multi}{\item[$\circ$]}
 \newcommand{\Lmulti}{
-	\ifloesung
-      \item[$\ast$]
+    \ifloesung
+	   \color{\LFarbe}\item[X]\color{\TFarbe}
     \else
-	  \item[$\circ$]
-	\fi
-}
+	   \item[$\circ$]
+    \fi
+ }
 
 
