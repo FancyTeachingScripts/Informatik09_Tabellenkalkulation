@@ -2,7 +2,9 @@
 % (vorkonfigurierte) Optionen festlegen 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[
-     presentation-minimal          % nur Inhalt ohne Features
+    % presentation-minimal          % nur Inhalt ohne Features
+    % presentation-minimal-attachments % nur Inhalt + Dateianhänge
+    %presentation-noaufraeumen       % alles ohne Aufräum-Folie
     % presentation-minimal-session  % nur Inhalt, Stundeneinteilung
     % presentation-nosession        % alle Features, ohne Stundeneinteilung
     % presentation-notimer          % alle Features außer Timer, Stundeneinteilung
@@ -10,13 +12,13 @@
     % print-students                % QR-Codes & Dateianhang, für Schüler
     % print-solution                % QR-Codes & Dateianhang, Muster-Lösung
     % print-students-cover          % wie print-students + Cover-Seite mit Logo+Titel 
-    % print-solution-cover          % wie print-solution + Cover-Seite mit Logo+Titel 
+     print-solution-cover          % wie print-solution + Cover-Seite mit Logo+Titel 
     % print-students-minimal        % nur Inhalt ohne Features, für Schüler
     % print-solution-minimal        % nur Inhalt ohne Features, Muster-Lösung
 ]{sty/MainPackage}
 
 %\SetTheme{derksen}
-%\SetTheme{mtg}
+\SetTheme{mtg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HIER DIE INHALTE EINFÜGEN ODER IMPROTIEREN (empfohlen)
@@ -34,5 +36,5 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% !!! IMMER MIT XELATEX KOMPILIEREN !!!
+% !!! IMMER MIT LUALATEX KOMPILIEREN !!!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
